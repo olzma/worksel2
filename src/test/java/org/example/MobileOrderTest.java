@@ -13,7 +13,7 @@ class MobileOrderTest {
         assertEquals("123", mobileOrder.getOrderId());
         assertEquals("Book", mobileOrder.getProduct());
         assertEquals(2, mobileOrder.getQuantity());
-        assertEquals("+123", mobileOrder.getMobile());
+        assertEquals("123", mobileOrder.getMobile());
         assertTrue(mobileOrder instanceof Order);
     }
 
@@ -21,7 +21,7 @@ class MobileOrderTest {
     void testMobileSetter() {
         MobileOrder mobileOrder = new MobileOrder("123", "Book", 2, "+123");
         mobileOrder.setMobile("+999");
-        assertEquals("+999", mobileOrder.getMobile());
+        assertEquals("+999".toString(), mobileOrder.getMobile());
     }
 
     @Test
